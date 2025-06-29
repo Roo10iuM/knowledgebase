@@ -5,4 +5,7 @@
 # Table of Contents
 
 - Прикладные программы
-  - [QEMU](./qemu.md)
+  - [SSH](./ssh.md)
+- Виртуализация
+  - QEMU
+    - [QEMU start](./qemu.md)

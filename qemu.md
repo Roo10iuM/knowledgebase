@@ -2,7 +2,7 @@
 
 QEMU (Quick EMUlator) - это свободная программа с открытым исходным кодом, которая может использоваться как эмулятор аппаратного обеспечения, так и для виртуализации.
 
-В качестве примера работы с qemu, создадим виртуальную машину. Гостевой системой будет debian.
+В качестве примера работы с qemu, создадим виртуальную машину. Гостевой системой будет Debian.
 
 ## Debian
 
@@ -33,8 +33,7 @@ sudo pacman -S qemu-full
 <details>
 <summary>О qcow2</summary><br>
 qcow2 - формат, который выделяет место под файл образа только тогда, когда гостевая операционная система фактически записывает данные в эти секторы своего виртуального жесткого диска. Гостевой ОС образ видится полного размера, хотя реально на хост-системе он может занимать очень небольшой объем пространства. Этот формат образа также поддерживает функциональность создания снимков состояния (snapshots) QEMU. Однако использование этого формата вместо raw может негативно сказаться на производительности.
-</details><br>
-
+</details>
 
 ## Устанавливаем систему
 
@@ -80,9 +79,9 @@ qemu-system-x86_64 -hda debOS.qcow2 \
 
 - [Debian mirrors](https://www.debian.org/CD/http-ftp/)
 - [QEMU Arch wiki](https://wiki.archlinux.org/title/QEMU)
-    - [Installation](https://wiki.archlinux.org/title/QEMU#Installation)
-    - [Creating_a_new_virtualized_system](https://wiki.archlinux.org/title/QEMU#Creating_a_new_virtualized_system)
-    - [Running_a_virtualized_system](https://wiki.archlinux.org/title/QEMU#Running_a_virtualized_system)
-    - [virtio](https://wiki.archlinux.org/title/QEMU#virtio)
+  - [Installation](https://wiki.archlinux.org/title/QEMU#Installation)
+  - [Creating_a_new_virtualized_system](https://wiki.archlinux.org/title/QEMU#Creating_a_new_virtualized_system)
+  - [Running_a_virtualized_system](https://wiki.archlinux.org/title/QEMU#Running_a_virtualized_system)
+  - [virtio](https://wiki.archlinux.org/title/QEMU#virtio)
 - [habr быстрый старт](https://habr.com/ru/sandbox/244526/)
 - [habr общие принципы работы QEMU-KVM](https://habr.com/ru/articles/466549/)
