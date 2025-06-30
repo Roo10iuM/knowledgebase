@@ -5,7 +5,9 @@
 # Table of Contents
 
 - Прикладные программы
-  - [SSH](./ssh.md)
+  - [SSH](ssh.md)
+- Сети
+  - [Модель OSI](OSI.md)
 - Виртуализация
   - QEMU
-    - [QEMU start](./qemu.md)
+    - [QEMU start](qemu.md)
