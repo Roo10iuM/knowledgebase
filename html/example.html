@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVD</title>
+</head>
+<style>
+    body {
+        background-color: #373737; 
+        color: rgb(255, 0, 0);
+    }
+    #movable {
+        display: inline;
+        position: absolute;
+        top: 10vh;
+        left: 20vw;
+        font-size: 8vh;
+    }
+</style>
+<body>
+    <div id="movable">!!!hello, nginx!!!</div>
+</body>
+<script>
+    const colors = [
+        "#FF0000",
+        "#3914AF",
+        "#FFD300",
+        "#00CC00",
+    ];
+    let count = 0;
+
+    window.onload = () => {
+        const fps = 60;
+        let speed_y = window.innerHeight/4/fps;
+        let speed_x = window.innerHeight/4/fps;
+
+        const movable = document.getElementById("movable");
+
+        function calc_pos() {
+            
+
+            const wh = window.innerHeight;
+            const ww = window.innerWidth;
+            const top = movable.offsetTop;
+            const left = movable.offsetLeft;
+            const h = movable.offsetHeight;
+            const w = movable.offsetWidth;
+
+            let resTop;
+            if (top+h+speed_y  > wh) {
+                resTop = top - (top+h+speed_y)%wh;
+                speed_y *= -1;
+                count = (count+1)%colors.length;
+            }
+            else if (top+speed_y < 0) {
+                resTop = -top-speed_y;
+                speed_y *= -1;
+                count = (count+1)%colors.length;
+            }
+            else {
+                resTop = top+speed_y;
+            }
+
+            let resLeft;
+            if (left+w+speed_x  > ww) {
+                resLeft = left - (left+w+speed_x)%ww;
+                speed_x *= -1;
+                count = (count+1)%colors.length;
+            }
+            else if (left+speed_x < 0) {
+                resLeft = -left-speed_x;
+                speed_x *= -1;
+                count = (count+1)%colors.length;
+            }
+            else {
+                resLeft = left+speed_x;
+            }
+
+            movable.style.top = `${resTop}px`;
+            movable.style.left = `${resLeft}px`;
+            movable.style.color = colors[count];
+
+            setTimeout(calc_pos, 1000/fps);
+        }
+        setTimeout(calc_pos, 1000/fps);
+    }
+</script>
+</html>

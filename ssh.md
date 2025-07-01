@@ -109,25 +109,25 @@ Host 127.0.0.1
 
 Для проброса портов необходимо зайти в параметры VM > Сети > Проброс портов и добавить правило для перенаправления запросов с порта 2222 хоста на порт 22 гостя:
 
-<img src="img/port_forwarding.png" width=625/>
+<img src="img/port_forwarding.png" width=625 alt="VBox проброс портов"/>
 
 ## Putty
 
 Сначала перенесём приватный ключ на хост. После чего с помощью  `puttygen.exe` загрузим(Load) и сохраним(Save private key)  его в нужном для putty формате *.ppk*.
 
-<img src="img/puttygen.png" width=625/>
+<img src="img/puttygen.png" width=625 alt="puttygen: Actions"/>
 
 Теперь можно подключиться к SSH-серверу. Для этого надо ввести HostName - 127.0.0.1, port - 2222 и указать путь до полученного на прошлом шаге ключа в Connection>SSH>Auth>Credentials.
 
-<img src="img/putty.png" width=625/>
+<img src="img/putty.png" width=625 alt="putty успешное подключение"/>
 
 ## notepad++ | NppFTP
 
 Для подключения через notepad++ достаточно создать следующий профайл:
 
-<img src="img/NppFTP_connect.png" width=312/>
+<img src="img/NppFTP_connect.png" width=312 alt="профайл_1"/>
 
-<img src="img/NppFTP_auth.png" width=312/>
+<img src="img/NppFTP_auth.png" width=312 alt="профайл_2"/>
 
 ## Sources
 

@@ -6,6 +6,7 @@
 
 - Прикладные программы
   - [SSH](ssh.md)
+  - [nginx и apache](nginpache.md)
 - Сети
   - [Модель OSI](OSI.md)
 - Виртуализация
