@@ -49,8 +49,9 @@ MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) — это 
 
 - [Эксфильтрация данных (Exfiltration)](https://attack.mitre.org/tactics/TA0010/)
     > Цель: украсть данные.
+
 - [Деструктивное воздействие (Impact)](https://attack.mitre.org/tactics/TA0040/)
-    > Цель: манипулировать, прерывать или уничтожить свои системы и данные.
+    > Цель: манипулировать целевыми системами и данными или уничтожить их.
 
 
 # Практика
