@@ -23,7 +23,7 @@ Thank you for using nginx.
 Для примера создадим файл [example.html](html/example.html) и настроим сервер, чтобы он возвращал его в ответ на запросы по адресу `localhost:9080`.
 
 ```
-http {                     # создаём контекст html
+http {                     # создаём контекст http
   server {                 # создаём контекст сервер
     listen localhost:9080; # слушаем localhost:9080
     location / {           # если префикс запроса - '/',
