@@ -11,6 +11,7 @@
     - [Начало](docker/docker_start.md)
     - [Dockerfile](docker/docker_file.md)
     - [Network](docker/docker_network.md)
+    - [Docker Compose](docker/docker_compose.md)
 - Сети
   - [Модель OSI](OSI.md)
 - Виртуализация
